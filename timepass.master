@@ -1,0 +1,132 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        .navbar {
+            width: 100%;
+            background-color: #333;
+            overflow: hidden;
+        }
+        .navbar h1 {
+            color: white;
+            float: left;
+            padding: 14px 20px;
+            text-align: center;
+            font-size: 1.5em;
+            margin: 0;
+        }
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            float: right;
+        }
+        .navbar ul li {
+            float: left;
+        }
+        .navbar ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .navbar ul li a:hover {
+            background-color: #575757;
+        }
+        .main-content {
+            padding: 20px;
+            min-height: calc(100vh - 200px); /* Adjust height based on navbar and footer */
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .footer a {
+            color: #f8f9fa;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style2 {
+            height: 215px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="navbar">
+            <h1>Mantor's College
+                
+
+            </h1>
+            
+            <ul>
+                <li><a href="Homee.aspx">Home</a></li>
+                <li><a href="Books.aspx">Library</a></li>
+                <li><a href="service.aspx">Facilities</a></li>
+                <li><a href="about.aspx">About</a></li>
+                <li><a href="contact.aspx">Contact</a></li>
+                <li><a href="login.aspx">Login</a></li>
+                <li id="RegisterLink" runat="server"><a href="registration.aspx">Register</a></li>
+                
+                <li id="LogoutLink" runat="server" ><a href="login.aspx" OnClick="LogoutLink_Click">Logout</a></li>
+            </ul>
+        </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Label ID="lblWelcome" runat="server" ForeColor="Black" Font-Bold="True" Font-Size="X-Large"></asp:Label>
+        <div class="main-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                
+                <asp:Label ID="lbl" runat="server" Text=""></asp:Label>
+                
+                <table class="auto-style1">
+                    <tr>
+                        <td class="auto-style2">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                </table>
+            </asp:ContentPlaceHolder>
+            
+        </div>
+        <div class="footer">
+            <p>&copy; 1967 Mantor's College. All Rights Reserved.</p>
+            <p>
+                    <a href="tel:+44(0)2078365454" style="box-sizing: border-box; color: black; text-decoration: underline; background-color: transparent; font-family: KingsBureauGrotFiveOne, sans-serif; font-style: normal; font-weight: 400;" title="Call King's College London: +44 (0)20 7836 5454">+44 (0)20 7836 5454</a></p>
+            <p>Mantor&#39;s College Gujarat Strand Gujarat WC2R 2LS India</p>
+            <p>
+                <a href="#">Privacy Policy</a> | 
+                <a href="#">Terms of Service</a> | 
+                <a href="#">Contact Us</a>
+            </p>
+        </div>
+    </form>
+</body>
+</html>
